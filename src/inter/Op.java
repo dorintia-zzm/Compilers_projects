@@ -1,13 +1,14 @@
-package zzm.book.inter;
+package inter;
 
-import zzm.book.lexer.Token;
-import zzm.book.symbol.Type;
+import lexer.Token;
+import symbols.Type;
 
 public class Op extends Expr {
-    public Op(Token tok, Type p){
-        super(tok,p);
+    public Op(Token tok, Type p) {
+        super(tok, p);
     }
-    public Expr reduce(){
+
+    public Expr reduce() {
         Expr x = gen();
         Temp t = new Temp(type);
         emit(t.toString() + " = " + x.toString());

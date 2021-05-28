@@ -1,12 +1,13 @@
-package zzm.book.main;
+package main;
 
-import zzm.book.lexer.Lexer;
-import zzm.book.parser.*;
+import lexer.Lexer;
+import parser.Parser;
 
 import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
+        // write your code here
         Lexer lex = new Lexer();
         Parser parse = new Parser(lex);
         parse.program();
